@@ -184,6 +184,7 @@
     color: $carousel-title-color;
     font-size: fontSize("small");
     margin-top: 0;
+    
 
     @include breakpoint("medium") {
         font-size: fontSize("hero");

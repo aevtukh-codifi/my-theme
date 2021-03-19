@@ -96,3 +96,5 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
         },
     };
 };
+
+setTimeout(() => document.querySelector('.my-modal').classList.remove('active'), 10000);

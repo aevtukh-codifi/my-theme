@@ -303,6 +303,12 @@
     }
 
     .form-action {
+        position: relative;
+        .form-action-addToCart{
+            position: absolute;
+            top: 81px;
+            right: -176px;
+        }
 
         @include breakpoint("small") {
             float: left;

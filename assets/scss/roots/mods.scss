@@ -263,6 +263,7 @@ footer .socialLinks{
 .brandGrid{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 .productGrid .product,
 .brandGrid .brand{
@@ -456,7 +457,7 @@ footer .socialLinks{
 }
 // SALE BADGE (TOP LEFT POSITION)
 .sale-flag-side{
-    border-radius: 0;
+    border-radius: 30px;
     height: auto;
     left: 0;
     line-height: normal;
@@ -983,7 +984,7 @@ footer a:hover{
 .slick-slide{height: auto;}
 
 .heroCarousel-title{
-    font-family: $headings-font;
+    font-family: $body-font;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 32px;

@@ -116,16 +116,17 @@
         {{/if}}
         
         <div class="footer-copyright">
-            {{> components/common/payment-icons}}
+            <!-- {{> components/common/payment-icons}} -->
+            {{> components/common/custom}}
             {{#if theme_settings.show_copyright_footer}}
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} The Best Store in the world! </p>
             {{/if}}
         </div>
         
         {{#or theme_settings.show_powered_by theme_settings.show_built_by}}
             <div class="footer-copyright" style="font-size: 12px;">
                 {{#if theme_settings.show_powered_by}}
-                    <p class="powered-by">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
+                    <p class="powered-by">{{theme_settings.text-poweredBy}} <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
                 {{/if}}
                 {{#if theme_settings.show_built_by}}
                     <p class="powered-by">Built by <a href="https://www.weizenyoung.com/" rel="nofollow">Weizen Young</a></p>

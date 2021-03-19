@@ -87,6 +87,7 @@
     position: absolute;
     transition: background-color 800ms ease;
     z-index: zIndex("lower");
+    border-radius: 30px;
 }
 
 .product:hover .sale-flag-side {

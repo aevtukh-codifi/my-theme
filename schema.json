@@ -529,6 +529,97 @@
     ]
   },
   {
+    "name":"My Modal",
+    "settings":[      
+      {
+        "type": "heading",
+        "content": "Change modal title"
+      },
+      { 
+        "type":"color",
+        "label":"My modal color title",
+        "id":"my-modal-color-title"
+      },
+      { 
+        "type":"color",
+        "label":"My modal color content",
+        "id":"my-modal-color-content"
+      },
+      { 
+        "type":"color",
+        "label":"My modal color background",
+        "id":"my-modal-background"
+      },
+      {
+        "type": "heading",
+        "content": "Change modal title"
+      },      
+      {
+        "type":"input",
+        "ladel": "My modal title",
+        "force_reload":true,
+        "id":"my-modal-title"
+      },
+      {
+        "type": "heading",
+        "content": "My modal content"
+      },
+      {
+        "type":"input",
+        "ladel": "My modal content",
+        "force_reload":true,
+        "id":"my-modal-content"
+      }      
+    ]
+  },
+  {
+    "name":"Footer",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "Powered By changes"
+      },
+      {
+        "type":"input",
+        "ladel": "Text powered by",
+        "id":"text-poweredBy"
+      },
+      { 
+          "type":"color",
+          "label":"Footer text color",
+          "id":"color-poweredBy"
+      },
+      {
+        "type": "font",
+        "label": "Footer font poweredBy",
+        "force_reload":true,
+        "id": "font-poweredBy",
+        "options": [
+          {
+            "group": "Karla",
+            "label": "Karla",
+            "value": "Google_Karla_400"
+          },
+          {
+            "group": "Roboto",
+            "label": "Roboto",
+            "value": "Google_Roboto_400"
+          },
+          {
+            "group": "Source Sans Pro",
+            "label": "Source Sans Pro",
+            "value": "Google_Source+Sans+Pro_400"
+          },
+          {
+            "group": "Helvetica",
+            "label": "Helvetica",
+            "value": "Helvetica"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Fonts",
     "settings": [
       {
@@ -1974,6 +2065,7 @@
         "force_reload": true,
         "id": "show_powered_by"
       },
+      
       {
         "type": "checkbox",
         "label": "Show &quot;Built by Weizen Young&quot;",

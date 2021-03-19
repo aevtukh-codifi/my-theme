@@ -128,8 +128,9 @@
     }
 
     > .powered-by {
-        color: stencilColor("color-textSecondary");
+        color: stencilColor("color-poweredBy")!important;
         margin: 0;
+        font-family: stencilFontFamily("font-poweredBy")!important;
     }
 
     > .paypal-credit {

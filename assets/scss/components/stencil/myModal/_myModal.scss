@@ -1,0 +1,22 @@
+.my-modal {
+    display: none;
+}
+
+.my-modal.active{
+    position: absolute;
+    z-index: 143;
+    top: 0px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    background-color: stencilColor("my-modal-background");
+    .my-modal__content-title{
+        color: stencilColor("my-modal-color-title");
+        font-size: 32px;
+    }
+    .my-modal__content-main{
+        color: stencilColor("my-modal-color-content");
+        font-size: 16px;
+    }
+}
