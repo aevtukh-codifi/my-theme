@@ -391,6 +391,7 @@
     "paymentbuttons-paypal-label": "checkout",
     "paymentbuttons-paypal-tagline": false,
     "paymentbuttons-paypal-fundingicons": false,
+    "promo-text":"BEST PRODUCT and PRICE",
     "supported_card_type_icons": [
       "american_express",
       "diners",
@@ -545,7 +546,7 @@
         "color-primaryDarker": "#2d2d2d",
         "color-primaryLight": "#a5a5a5",
         "color-secondary": "#ffffff",
-        "color-poweredBy":"#000000",
+        "color-poweredBy":"#ffffff",
         "color-secondaryDark": "#e5e5e5",
         "color-secondaryDarker": "#cccccc",
         "color-error": "#cc4749",

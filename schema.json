@@ -573,6 +573,16 @@
     ]
   },
   {
+    "name":"Promo text",
+    "settings": [
+      {
+        "type":"input",
+        "ladel": "Promo text",
+        "id":"promo-text"
+      }
+    ]
+  },
+  {
     "name":"Footer",
     "settings": [
       {

@@ -1,0 +1,78 @@
+<ul class="navPages-list navPages-mega navPages-mainNav">
+    {{#each categories}}
+        <li class="navPages-item">
+            {{> components/common/navigation-list}}
+        </li>
+    {{/each}}
+    {{#if theme_settings.show_content_navigation}}
+        {{#each pages}}
+            <li class="navPages-item{{#if @index '===' 0}} navPages-item--content-first{{/if}}">
+                {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                    {{> components/common/navigation-list-alternate}}
+                {{/if}}
+                {{#if ../theme_settings.navigation_design '===' 'mega'}}
+                    {{> components/common/navigation-list}}
+                {{/if}}
+            </li>
+         {{/each}}
+    {{/if}}
+</ul>
+    <!-- <div class="container">
+        <div class="headerBody">
+            <div class="menuBurger">
+                <span></span>
+            </div>
+            <nav class="menu">
+                <ul class="menuList">
+                    <li>
+                        <a href="#" class="menuFirstLevel">Item 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menuFirstLevel">Item 2</a>
+                        <span class="menuArrow arrow"></span>
+                        <ul class="menuListSecond">
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 2.1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 2.2</a>
+                                <span class="menuSecondArrow arrow"></span>
+                                <ul class="menuListThird">
+                                    <li>
+                                        <a href="#" class="menuThirdLevel">Item 2.2.1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 2.3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 2.4</a>
+                                <span class="menuSecondArrow arrow"></span>
+                                <ul class="menuListThird">
+                                    <li>
+                                        <a href="#" class="menuThirdLevel">Item 2.4.1</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="menuFirstLevel">Item 3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menuFirstLevel">Item 4</a>
+                        <span class="menuArrow arrow"></span>
+                        <ul class="menuListSecond">
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 4.1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menuSecondLevel">Item 4.2</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div> -->
