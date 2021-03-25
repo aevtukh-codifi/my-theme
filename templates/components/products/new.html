@@ -1,6 +1,6 @@
 <h2 class="page-heading">{{lang 'products.new' }}</h2>
 
-<ul class="productGrid productGrid--maxCol{{ columns }}">
+<ul data-slides="{{theme_settings.homepage_new_products_column_count}}" data-slidesScroll={{theme_settings.homepage_new_products_column_count_scroll}} class="productGrid productGrid--maxCol{{ columns }} collection-slider">
     {{#each products}}
         <li class="product">
             {{>components/products/card theme_settings=../theme_settings customer=../customer show_rating=../settings.show_product_rating}}

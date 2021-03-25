@@ -98,6 +98,7 @@ $subtleGrey: #ebebeb;
 [data-content-region]{clear: both;}
 
 body{
+    padding-top: 100px!important;
     transition: padding-top .3s linear;
 }
 h1, h2{
@@ -1106,6 +1107,9 @@ footer a:hover{
 .read-more{margin-top: 15px;}
 
 // CATEGORY PAGE
+.page--category{
+    margin-top: 120px;
+}
 .page--category h1{
     text-transform: stencilString('category_name_capitalization');
 }
@@ -1561,6 +1565,7 @@ li.pagination-item--previous a{
         position: fixed;
         transition: all .3s linear;
         top: 0;
+        margin-top: 60px;
     }
     .header .navPages-container{
         background: stencilColor("navPages-backgroundColor");
@@ -2563,5 +2568,358 @@ li.pagination-item--previous a{
     // FOOTER
     .footer-payment-icons{
         text-align: center;
+    }
+}
+
+//My slider
+.collection-slider{
+    padding-left: 25px;
+    padding-right: 30px;
+    overflow: hidden;
+    .slick-track{
+        display: flex;
+    }
+    .product{
+        width: 100%;
+    }
+    .slick-prev{
+        left: 0;
+       
+    }
+    .slick-next{
+        right: 0;
+        
+    }
+}
+
+.my-carusel{
+    padding-left: 25px;
+    padding-right: 30px;
+    overflow: hidden;
+    .my-carusel__item{
+        padding:0 20px;
+        position: relative;
+        p{
+            position: absolute;
+            z-index: 34;
+            top: 6px;
+            font-size: 26px;
+            left: 29px;
+        }
+        // &.slick-center{
+        //     width: 460px!important;
+            
+        // }
+    }
+    .slick-track{
+        display: flex;
+        align-items: center;
+    }
+    .product{
+        width: 100%;
+    }
+    .slick-prev{
+        left: 0;
+        z-index: 500;
+    }
+    .slick-next{
+        right: 0;
+        z-index: 500;
+    }
+}
+
+// My dropdaown menu
+
+.header-my_menu {
+    .container {
+        margin: 0px auto;
+        padding: 0px 10px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+        z-index: 1;
+    }
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 60px;
+}
+
+.headerBody {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.menuBurger {
+    display: none;
+}
+
+.menu {
+    max-width: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu a.parent {
+    margin: 0px 30px 0px 0px;
+}
+
+.menu li {
+    position: relative;
+    list-style: none;
+}
+
+.menuList {
+    display: flex;
+    margin-left: 0;
+    justify-content: space-around;
+}
+
+.menuList>li {
+    margin: 80px 80px 80px 0px;
+}
+
+.menuFirstLevel {
+    color: #000000;
+}
+
+.menuListSecond {
+    display: none;
+    min-width: 300px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding: 30px 0px 0px 0px;
+}
+
+.menuListSecond>li {
+    background-color: grey;
+}
+
+.menuSecondLevel {
+    color: #000000;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.menuListThird {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    top: 0;
+    left: 90%;
+    padding: 0px 0px 0px 5px;
+}
+
+.menuListThird {
+    background-color: grey;
+}
+
+.menuThirdLevel {
+    color: #000000;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.arrow {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.arrow.active {
+    transform: rotate(-180deg);
+}
+
+.menuSecondArrow.arrow {
+    right: 10px;
+    border-left: 10px solid #000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: none;
+}
+
+.menuArrow {}
+
+.content {
+    padding: 100px 0px 0px 0px;
+}
+
+.contentText h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contentText p {
+    line-height: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+body.mouse .menuList>li:hover .menuListSecond {
+    display: block;
+}
+
+body.mouse .menuListSecond>li:hover .menuListThird {
+    display: block;
+}
+
+body.touch .menuListSecond.open {
+    display: block;
+}
+
+body.touch .menuListThird.open {
+    display: block;
+}
+
+body.touch .arrow {
+    display: block;
+}
+
+@media (max-width:1024px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .headerBody {
+        height: 50px;
+    }
+
+    .menuBurger {
+        margin-left: auto;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .menuBurger span {
+        position: absolute;
+        background-color: #000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+
+    .menuBurger:before,
+    .menuBurger:after {
+        content: '';
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .menuBurger:before {
+        top: 0;
+    }
+
+    .menuBurger:after {
+        bottom: 0;
+    }
+
+    .menuBurger.active span {
+        transform: scale(0);
+    }
+
+    .menuBurger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menuBurger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: grey;
+        transition: all 0.3s ease 0s;
+        padding: 70px 10px 20px 10px;
+        overflow: auto;
+        z-index: 1;
+    }
+
+    .menu.active {
+        top: 0;
+    }
+
+    .content {
+        padding: 50px 0px 0px 0px;
+    }
+
+    .wrapper {
+        padding: 15px;
+    }
+
+    .menuList {
+        display: block;
+    }
+
+    .menuList>li {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .menuListSecond {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .menuListThird {
+        padding: 0px 5px;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .menuListSecond>li {
+        background-color: #fff;
+    }
+
+    .menuListThird {
+        background-color: #fff;
+    }
+
+    .menuArrow.arrow {
+        border-top: 10px solid #000;
+    }
+
+    .menuSecondArrow.arrow {
+        right: 10px;
+        top: 15px;
+        border-bottom: none;
+        border-left: 10px solid transparent;
+        border-top: 10px solid #000;
+        border-right: 10px solid transparent;
     }
 }

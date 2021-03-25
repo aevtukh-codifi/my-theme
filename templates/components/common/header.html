@@ -1,7 +1,8 @@
 <header class="header" role="banner">
-    <!-- <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+    {{> components/common/my-dropdaown-menu }}
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon"></span>
-    </a> -->
+    </a>
 
     <div class="header-logo--wrap">
         <div class="header-logo {{#if theme_settings.logo_size '===' 'original'}}logo-full-size{{/if}}">
@@ -32,6 +33,7 @@
     <div class="navPages-container" id="menu" data-menu>
         {{> components/common/navigation-menu}}       
     </div>
+    
 </header>
 {{#unless page_type '===' 'default'}}
 

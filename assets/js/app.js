@@ -97,9 +97,98 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
     };
 };
 
-setTimeout(() => document.querySelector('.my-modal').classList.remove('active'), 2000);
+//My modal
 
-let isMobile = {
+if (!sessionStorage.getItem('loaded')) {
+    document.querySelector('.my-modal').classList.add('active');
+    console.log(sessionStorage)
+}
+
+function closeModal(){
+    if (!sessionStorage.getItem('loaded')) {
+        document.querySelector('.my-modal').classList.remove('active'),
+        sessionStorage.setItem('loaded', 'done');
+    }
+    console.log(sessionStorage)
+}
+setTimeout(closeModal, 7000);
+
+//My collection-new-slider
+$('.collection-slider').each(function(){
+    
+    let num_slides = $(this).data('slides');
+    let scroll_slides = $(this).data('slidesScroll');
+    
+    $(this).slick(
+        {
+            dots: false,
+            infinite: true,
+            slidesToShow: num_slides,
+            slidesToScroll: scroll_slides,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false
+                }
+                },
+                {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        }
+    )
+})
+
+//MY custom slider
+$('.my-carusel').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+            },
+            {
+            breakpoint: 750,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+    ]
+  });
+
+  // My dropdaown menu
+
+  let isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
     },
@@ -124,7 +213,7 @@ let body = document.querySelector('body');
 if (isMobile.any()) {
     body.classList.add('touch');
     let arrow = document.querySelectorAll('.arrow');
-    for (i = 0; i < arrow.length; i++) {
+    for (let i = 0; i < arrow.length; i++) {
         let thisLink = arrow[i].previousElementSibling;
         let subMenu = arrow[i].nextElementSibling;
         let thisArrow = arrow[i];
@@ -147,3 +236,4 @@ menuBurger.addEventListener('click', function () {
     menuBurger.classList.toggle('active');
     menu.classList.toggle('active');
 })
+ 

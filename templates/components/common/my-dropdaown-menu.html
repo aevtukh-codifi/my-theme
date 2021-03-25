@@ -1,0 +1,55 @@
+
+    <header class="header-my_menu">
+        <div class="container">
+            <div class="headerBody">
+                <div class="menuBurger">
+                    <span></span>
+                </div>
+                <nav class="menu">
+                    <ul class="menuList">
+                        {{#each categories}}
+                            <li>
+                                <a class="menuFirstLevel"
+                                href="{{url}}"
+                                data-collapsible="navPages-{{id}}"
+                                >
+                                    {{name}}
+                                </a>
+                                {{#if children}}
+                                <span class="menuSecondArrow arrow"></span>
+                                {{/if}}   
+                                <ul class="menuListSecond">
+                                    {{#each children}}
+                                        <li>
+                                            <a class="menuSecondLevel" href="{{url}}">{{name}}</a>
+                                            {{#if children}}
+                                            <span class="menuSecondArrow arrow"></span>
+                                            {{/if}}
+                                            {{#if children}}
+                                                {{#each children}}
+                                                    <ul class="menuListThird">
+                                                        <li>
+                                                            <a class="menuThirdLevel" href="{{url}}">{{name}}</a>
+                                                        </li>
+                                                    </ul>
+                                                {{/each}}
+                                            {{/if}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                        {{/each}}
+                        <!-- {{#if theme_settings.show_content_navigation}}
+                            {{#each pages}}
+                                <li >
+                                    <a class="menuFirstLevel" href="{{url}}">
+                                        {{name}}
+                                    </a>
+                                </li>
+                            {{/each}}
+                        {{/if}} -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
